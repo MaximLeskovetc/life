@@ -128,7 +128,6 @@ function drawGameOver() {
 }
 
 function addSpot(ev) {
-    countSpotEl.innerText = countSpot;
     let x = Math.floor(ev.offsetX / 10);
     let y = Math.floor(ev.offsetY / 10);
 
@@ -136,6 +135,8 @@ function addSpot(ev) {
         countSpot--;
         mat[x][y] = 1;
     }
+
+    countSpotEl.innerText = countSpot;
 }
 
 function ftp(i) {
